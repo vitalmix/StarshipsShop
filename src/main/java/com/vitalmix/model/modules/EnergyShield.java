@@ -2,27 +2,30 @@ package com.vitalmix.model.modules;
 
 public class EnergyShield extends Module{
 
-    private int energyPerDamage;
+    private int damageReduction;
     private int regenerationPerSecond;
+    private int durability;
 
-    public EnergyShield(String type, String description, int energyPerDamage, int regenerationPerSecond) {
+    public EnergyShield(String type, String description, int damageReduction, int regenerationPerSecond, int durability) {
         super(type, description);
-        this.energyPerDamage = energyPerDamage;
+        this.damageReduction = damageReduction;
         this.regenerationPerSecond = regenerationPerSecond;
+        this.durability = durability;
     }
 
-    public EnergyShield(int id, String type, String description, int energyPerDamage, int regenerationPerSecond) {
+    public EnergyShield(int id, String type, String description, int damageReduction, int regenerationPerSecond, int durability) {
         super(id, type, description);
-        this.energyPerDamage = energyPerDamage;
+        this.damageReduction = damageReduction;
         this.regenerationPerSecond = regenerationPerSecond;
+        this.durability = durability;
     }
 
-    public int getEnergyPerDamage() {
-        return energyPerDamage;
+    public int getDamageReduction() {
+        return damageReduction;
     }
 
-    public void setEnergyPerDamage(int energyPerDamage) {
-        this.energyPerDamage = energyPerDamage;
+    public void setDamageReduction(int damageReduction) {
+        this.damageReduction = damageReduction;
     }
 
     public int getRegenerationPerSecond() {
