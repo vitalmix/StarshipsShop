@@ -4,6 +4,7 @@ public class SpeedBooster extends Module {
 
     private int speedBoost;
     private int timeOfBoost;
+    private static final String type = "Speed booster";
 
     public SpeedBooster(String type, String description, int speedBoost, int timeOfBoost) {
         super(description);
@@ -31,5 +32,9 @@ public class SpeedBooster extends Module {
 
     public void setTimeOfBoost(int timeOfBoost) {
         this.timeOfBoost = timeOfBoost;
+    }
+
+    public static String getType() {
+        return type;
     }
 }

@@ -3,6 +3,7 @@ package com.vitalmix.model.modules;
 public class Hyperdrive extends Module {
 
     private int energyPerHyperdriveJump;
+    private static final String type = "Hyperdrive";
 
     public Hyperdrive(String type, String description, int energyPerHyperdriveJump) {
         super(description);
@@ -20,5 +21,9 @@ public class Hyperdrive extends Module {
 
     public void setEnergyPerHyperdriveJump(int energyPerHyperdriveJump) {
         this.energyPerHyperdriveJump = energyPerHyperdriveJump;
+    }
+
+    public static String getType() {
+        return type;
     }
 }

@@ -4,6 +4,7 @@ public class ArmorShield extends Module {
 
     private int damageReduction;
     private int durability;
+    private static final String type = "Armor Shield";
 
     public ArmorShield(String type, String description, int damageReduction, int durability) {
         super(description);
@@ -32,4 +33,9 @@ public class ArmorShield extends Module {
     public void setDurability(int durability) {
         this.durability = durability;
     }
+
+    public static String getType() {
+        return type;
+    }
+
 }
