@@ -3,6 +3,7 @@ package com.vitalmix.model.weapons;
 public class LaserGun extends Weapon {
 
     private int energyPerShot;
+    private static final String type = "Laser Gun";
 
     public LaserGun(String model, int damage, int fireRate, String description, int energyPerShot) {
         super(model, damage, fireRate, description);
@@ -20,5 +21,9 @@ public class LaserGun extends Weapon {
 
     public void setEnergyPerShot(int energyPerShot) {
         this.energyPerShot = energyPerShot;
+    }
+
+    public static String getType() {
+        return type;
     }
 }
