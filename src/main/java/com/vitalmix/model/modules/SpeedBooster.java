@@ -6,13 +6,13 @@ public class SpeedBooster extends Module {
     private int timeOfBoost;
 
     public SpeedBooster(String type, String description, int speedBoost, int timeOfBoost) {
-        super(type, description);
+        super(description);
         this.speedBoost = speedBoost;
         this.timeOfBoost = timeOfBoost;
     }
 
     public SpeedBooster(int id, String type, String description, int speedBoost, int timeOfBoost) {
-        super(id, type, description);
+        super(id, description);
         this.speedBoost = speedBoost;
         this.timeOfBoost = timeOfBoost;
     }

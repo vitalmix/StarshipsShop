@@ -12,5 +12,6 @@ misc.xml
 vcs.xml
 workspace.xml
 StarshipsShop.iml
+target
 # Editor-based HTTP Client requests
 /httpRequests/

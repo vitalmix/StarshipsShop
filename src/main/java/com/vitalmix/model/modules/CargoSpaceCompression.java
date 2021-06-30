@@ -5,12 +5,12 @@ public class CargoSpaceCompression extends Module{
     int compressionEfficiency;
 
     public CargoSpaceCompression(String type, String description, int compressionEfficiency) {
-        super(type, description);
+        super(description);
         this.compressionEfficiency = compressionEfficiency;
     }
 
     public CargoSpaceCompression(int id, String type, String description, int compressionEfficiency) {
-        super(id, type, description);
+        super(id, description);
         this.compressionEfficiency = compressionEfficiency;
     }
 

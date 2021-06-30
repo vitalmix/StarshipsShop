@@ -2,18 +2,15 @@ package com.vitalmix.model.modules;
 
 public abstract class Module {
 
-    int id;
-    String type;
+    private int id;
     private String description;
 
-    public Module(String type, String description) {
-        this.type = type;
+    public Module(String description) {
         this.description = description;
     }
 
-    public Module(int id, String type, String description) {
+    public Module(int id, String description) {
         this.id = id;
-        this.type = type;
         this.description = description;
     }
 
@@ -23,14 +20,6 @@ public abstract class Module {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getDescription() {
