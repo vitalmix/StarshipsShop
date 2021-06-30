@@ -1,6 +1,7 @@
 package com.vitalmix.model;
 
-import com.vitalmix.model.weapon.Weapon;
+import com.vitalmix.model.modules.Module;
+import com.vitalmix.model.weapons.Weapon;
 
 public class Starship {
 
