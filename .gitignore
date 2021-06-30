@@ -4,7 +4,7 @@
 /dataSources/
 /dataSources.local.xml
 ../StarshipsShop.iml
-compiler.xml
+.idea/compiler.xml
 jarRepositories.xml
 misc.xml
 vcs.xml
