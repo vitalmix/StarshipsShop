@@ -4,14 +4,7 @@
 /dataSources/
 /dataSources.local.xml
 ../StarshipsShop.iml
-.idea/compiler.xml
-.idea/uiDesigner.xml
-.idea/dictionaries/Admin.xml
-jarRepositories.xml
-misc.xml
-vcs.xml
-workspace.xml
-StarshipsShop.iml
+.idea
 target
 # Editor-based HTTP Client requests
 /httpRequests/
