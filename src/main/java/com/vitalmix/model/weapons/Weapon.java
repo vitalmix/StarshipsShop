@@ -1,12 +1,37 @@
 package com.vitalmix.model.weapons;
 
+import com.vitalmix.model.Starship;
+
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Weapon {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "damage")
     public int damage;
+
+    @Column(name = "fire_rate")
     private int fireRate;
+
+    @Column(name = "descr")
     private String description;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "starship_id")
+   /* @JoinTable(
+            name = "starship",
+            joinColumns = @JoinColumn(name = "starshipId", referencedColumnName = "starship_id")
+    )*/
+    private Starship starship;
 
     public Weapon(String model, int damage, int fireRate, String description) {
         this.model = model;

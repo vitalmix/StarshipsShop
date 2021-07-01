@@ -1,7 +1,14 @@
 package com.vitalmix.model.weapons;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "laser_gun")
 public class LaserGun extends Weapon {
 
+    @Column(name = "energy_per_shot")
     private int energyPerShot;
     private static final String type = "Laser Gun";
 
