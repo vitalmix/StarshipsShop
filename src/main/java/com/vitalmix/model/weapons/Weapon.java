@@ -23,7 +23,7 @@ public abstract class Weapon {
     private int fireRate;
 
     @Column(name = "descr")
-    private String description;
+    private String description; 
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "starship_id")

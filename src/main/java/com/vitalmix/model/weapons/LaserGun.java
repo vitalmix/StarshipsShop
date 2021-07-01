@@ -8,26 +8,26 @@ import javax.persistence.Table;
 @Table(name = "laser_gun")
 public class LaserGun extends Weapon {
 
-    @Column(name = "energy_per_shot")
-    private int energyPerShot;
+    @Column(name = "emp_modification")
+    private boolean empModification;
     private static final String type = "Laser Gun";
 
-    public LaserGun(String model, int damage, int fireRate, String description, int energyPerShot) {
+    public LaserGun(String model, int damage, int fireRate, String description, boolean empModification) {
         super(model, damage, fireRate, description);
-        this.energyPerShot = energyPerShot;
+        this.empModification = empModification;
     }
 
-    public LaserGun(int id, String model, int damage, int fireRate, String description, int energyPerShot) {
+    public LaserGun(int id, String model, int damage, int fireRate, String description, boolean empModification) {
         super(id, model, damage, fireRate, description);
-        this.energyPerShot = energyPerShot;
+        this.empModification = empModification;
     }
 
-    public int getEnergyPerShot() {
-        return energyPerShot;
+    public boolean isEmpModification() {
+        return empModification;
     }
 
-    public void setEnergyPerShot(int energyPerShot) {
-        this.energyPerShot = energyPerShot;
+    public void setEmpModification(boolean empModification) {
+        this.empModification = empModification;
     }
 
     public static String getType() {
