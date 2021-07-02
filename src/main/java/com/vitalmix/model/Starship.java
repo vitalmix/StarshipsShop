@@ -133,6 +133,6 @@ public class Starship {
 
         weapons.add(weapon);
 
-        weapon.setStarship(this );
+        weapon.setStarship(this);
     }
 }
