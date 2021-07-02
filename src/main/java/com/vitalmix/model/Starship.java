@@ -124,4 +124,15 @@ public class Starship {
     public void setCargoEmergencyRescueSystem(boolean cargoEmergencyRescueSystem) {
         this.cargoEmergencyRescueSystem = cargoEmergencyRescueSystem;
     }
+
+    public void addWeapon(Weapon weapon) {
+
+        if(weapons == null) {
+            weapons = new ArrayList<>();
+        }
+
+        weapons.add(weapon);
+
+        weapon.setStarship(this );
+    }
 }

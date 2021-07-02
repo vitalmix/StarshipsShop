@@ -2,6 +2,8 @@ package com.vitalmix.model.sql;
 
 import com.vitalmix.model.Starship;
 import com.vitalmix.model.weapons.LaserGun;
+import com.vitalmix.model.weapons.MachineGun;
+import com.vitalmix.model.weapons.RocketsLauncher;
 import com.vitalmix.model.weapons.Weapon;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,6 +19,8 @@ public class SessionFactoryManager {
                 .addAnnotatedClass(Starship.class)
                 .addAnnotatedClass(Weapon.class)
                 .addAnnotatedClass(LaserGun.class)
+                .addAnnotatedClass(MachineGun.class)
+                .addAnnotatedClass(RocketsLauncher.class)
                 .buildSessionFactory();
     }
 
