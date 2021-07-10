@@ -28,11 +28,13 @@ public class Module {
     }
 
     public Module(String model, String description) {
+        this.model = model;
         this.description = description;
     }
 
     public Module(int id, String model, String description) {
         this.id = id;
+        this.model = model;
         this.description = description;
     }
 

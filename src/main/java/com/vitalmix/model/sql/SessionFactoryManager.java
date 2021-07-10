@@ -1,6 +1,7 @@
 package com.vitalmix.model.sql;
 
 import com.vitalmix.model.Starship;
+import com.vitalmix.model.modules.*;
 import com.vitalmix.model.weapons.LaserGun;
 import com.vitalmix.model.weapons.MachineGun;
 import com.vitalmix.model.weapons.RocketsLauncher;
@@ -21,6 +22,12 @@ public class SessionFactoryManager {
                 .addAnnotatedClass(LaserGun.class)
                 .addAnnotatedClass(MachineGun.class)
                 .addAnnotatedClass(RocketsLauncher.class)
+                .addAnnotatedClass(Module.class)
+                .addAnnotatedClass(ArmorShield.class)
+                .addAnnotatedClass(CargoSpaceContraction.class)
+                .addAnnotatedClass(EnergyShield.class)
+                .addAnnotatedClass(Hyperdrive.class)
+                .addAnnotatedClass(SpeedBooster.class)
                 .buildSessionFactory();
     }
 
