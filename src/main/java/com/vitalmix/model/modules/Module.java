@@ -13,6 +13,9 @@ public class Module {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "model")
+    private String model;
+
     @Column(name = "module_description")
     private String description;
 
@@ -24,11 +27,11 @@ public class Module {
 
     }
 
-    public Module(String description) {
+    public Module(String model, String description) {
         this.description = description;
     }
 
-    public Module(int id, String description) {
+    public Module(int id, String model, String description) {
         this.id = id;
         this.description = description;
     }
@@ -39,6 +42,14 @@ public class Module {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public Starship getStarship() {

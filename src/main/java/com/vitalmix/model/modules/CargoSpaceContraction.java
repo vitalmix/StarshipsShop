@@ -1,17 +1,29 @@
 package com.vitalmix.model.modules;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cargo_space_contraction")
 public class CargoSpaceContraction extends Module{
 
+    @Column(name = "contraction_efficiency")
     int contractionEfficiency;
+
     private static final String type = "Cargo compression";
 
-    public CargoSpaceContraction(String description, int contractionEfficiency) {
-        super(description);
+    public CargoSpaceContraction() {
+
+    }
+
+    public CargoSpaceContraction(String model, String description, int contractionEfficiency) {
+        super(model, description);
         this.contractionEfficiency = contractionEfficiency;
     }
 
-    public CargoSpaceContraction(int id, String description, int contractionEfficiency) {
-        super(id, description);
+    public CargoSpaceContraction(int id, String model, String description, int contractionEfficiency) {
+        super(id, model, description);
         this.contractionEfficiency = contractionEfficiency;
     }
 
