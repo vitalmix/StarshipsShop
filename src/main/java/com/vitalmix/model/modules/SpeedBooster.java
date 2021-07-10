@@ -19,13 +19,13 @@ public class SpeedBooster extends Module {
     public SpeedBooster() {
     }
 
-    public SpeedBooster(String type, String description, int speedBoost, int timeOfBoost) {
+    public SpeedBooster(String description, int speedBoost, int timeOfBoost) {
         super(description);
         this.speedBoost = speedBoost;
         this.timeOfBoost = timeOfBoost;
     }
 
-    public SpeedBooster(int id, String type, String description, int speedBoost, int timeOfBoost) {
+    public SpeedBooster(int id, String description, int speedBoost, int timeOfBoost) {
         super(id, description);
         this.speedBoost = speedBoost;
         this.timeOfBoost = timeOfBoost;

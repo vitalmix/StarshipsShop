@@ -20,13 +20,13 @@ public class ArmorShield extends Module {
 
     }
 
-    public ArmorShield(String type, String description, int damageReduction, int durability) {
+    public ArmorShield(String description, int damageReduction, int durability) {
         super(description);
         this.damageReduction = damageReduction;
         this.durability = durability;
     }
 
-    public ArmorShield(int id, String type, String description, int damageReduction, int durability) {
+    public ArmorShield(int id, String description, int damageReduction, int durability) {
         super(id, description);
         this.damageReduction = damageReduction;
         this.durability = durability;

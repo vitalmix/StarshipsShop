@@ -23,14 +23,14 @@ public class EnergyShield extends Module{
 
     }
 
-    public EnergyShield(String type, String description, int damageReduction, int regenerationPerSecond, int durability) {
+    public EnergyShield(String description, int damageReduction, int regenerationPerSecond, int durability) {
         super(description);
         this.damageReduction = damageReduction;
         this.regenerationPerSecond = regenerationPerSecond;
         this.durability = durability;
     }
 
-    public EnergyShield(int id, String type, String description, int damageReduction, int regenerationPerSecond, int durability) {
+    public EnergyShield(int id, String description, int damageReduction, int regenerationPerSecond, int durability) {
         super(id, description);
         this.damageReduction = damageReduction;
         this.regenerationPerSecond = regenerationPerSecond;

@@ -17,12 +17,12 @@ public class Hyperdrive extends Module {
 
     }
 
-    public Hyperdrive(String type, String description, int energyPerHyperdriveJump) {
+    public Hyperdrive(String description, int energyPerHyperdriveJump) {
         super(description);
         this.energyPerHyperdriveJump = energyPerHyperdriveJump;
     }
 
-    public Hyperdrive(int id, String type, String description, int energyPerHyperdriveJump) {
+    public Hyperdrive(int id, String description, int energyPerHyperdriveJump) {
         super(id, description);
         this.energyPerHyperdriveJump = energyPerHyperdriveJump;
     }
