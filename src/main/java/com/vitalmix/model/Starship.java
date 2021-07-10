@@ -1,5 +1,6 @@
 package com.vitalmix.model;
 
+import com.vitalmix.model.modules.Module;
 import com.vitalmix.model.weapons.Weapon;
 
 import javax.persistence.*;
@@ -33,7 +34,10 @@ public class Starship {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "starship_id")
     private List<Weapon> weapons;
-    //private Module[] modules;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "starship_id")
+    private List<Module> modules;
 
     public Starship() {
 
@@ -82,13 +86,13 @@ public class Starship {
         this.weapons = weapons;
     }
 
-/*    public Module[] getModules() {
+    public List<Module> getModules() {
         return modules;
     }
 
-    public void setModules(Module[] modules) {
+    public void setModules(List<Module> modules) {
         this.modules = modules;
-    }*/
+    }
 
     public int getNumOfPassengers() {
         return numOfPassengers;
@@ -129,5 +133,14 @@ public class Starship {
         }
 
         weapons.add(weapon);
+    }
+
+    public void addModule(Module module) {
+
+        if(modules == null) {
+            modules = new ArrayList<>();
+        }
+
+        modules.add(module);
     }
 }

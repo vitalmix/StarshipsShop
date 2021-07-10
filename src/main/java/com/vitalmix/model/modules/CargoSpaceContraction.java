@@ -1,26 +1,26 @@
 package com.vitalmix.model.modules;
 
-public class CargoSpaceCompression extends Module{
+public class CargoSpaceContraction extends Module{
 
-    int compressionEfficiency;
+    int contractionEfficiency;
     private static final String type = "Cargo compression";
 
-    public CargoSpaceCompression(String type, String description, int compressionEfficiency) {
+    public CargoSpaceContraction(String type, String description, int contractionEfficiency) {
         super(description);
-        this.compressionEfficiency = compressionEfficiency;
+        this.contractionEfficiency = contractionEfficiency;
     }
 
-    public CargoSpaceCompression(int id, String type, String description, int compressionEfficiency) {
+    public CargoSpaceContraction(int id, String type, String description, int contractionEfficiency) {
         super(id, description);
-        this.compressionEfficiency = compressionEfficiency;
+        this.contractionEfficiency = contractionEfficiency;
     }
 
-    public int getCompressionEfficiency() {
-        return compressionEfficiency;
+    public int getContractionEfficiency() {
+        return contractionEfficiency;
     }
 
-    public void setCompressionEfficiency(int compressionEfficiency) {
-        this.compressionEfficiency = compressionEfficiency;
+    public void setContractionEfficiency(int contractionEfficiency) {
+        this.contractionEfficiency = contractionEfficiency;
     }
 
     public static String getType() {
