@@ -30,7 +30,8 @@ public class Starship {
     @Column(name = "cargo_emergency_rescue_system")
     private boolean cargoEmergencyRescueSystem;
 
-    @OneToMany(mappedBy = "starship", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "starship_id")
     private List<Weapon> weapons;
     //private Module[] modules;
 
@@ -38,10 +39,8 @@ public class Starship {
 
     }
 
-    public Starship(String model, /*List<Weapon> weapons,*//* Module[] modules,*/ int numOfPassengers, boolean passengerEmergencyRescueSystem, int numOfcCargo, boolean cargoEmergencyRescueSystem) {
+    public Starship(String model, int numOfPassengers, boolean passengerEmergencyRescueSystem, int numOfcCargo, boolean cargoEmergencyRescueSystem) {
         this.model = model;
-        /*this.weapons = weapons;*/
-       /* this.modules = modules;*/
         this.numOfPassengers = numOfPassengers;
         this.passengerEmergencyRescueSystem = passengerEmergencyRescueSystem;
         this.numOfcCargo = numOfcCargo;
@@ -50,11 +49,9 @@ public class Starship {
         weapons = new ArrayList<>();
     }
 
-    public Starship(int id, String model, List<Weapon> weapons,/* Module[] modules,*/ int numOfPassengers, boolean passengerEmergencyRescueSystem, int numOfcCargo, boolean cargoEmergencyRescueSystem) {
+    public Starship(int id, String model, int numOfPassengers, boolean passengerEmergencyRescueSystem, int numOfcCargo, boolean cargoEmergencyRescueSystem) {
         this.id = id;
         this.model = model;
-        this.weapons = weapons;
-       /* this.modules = modules;*/
         this.numOfPassengers = numOfPassengers;
         this.passengerEmergencyRescueSystem = passengerEmergencyRescueSystem;
         this.numOfcCargo = numOfcCargo;
@@ -132,7 +129,5 @@ public class Starship {
         }
 
         weapons.add(weapon);
-
-        weapon.setStarship(this);
     }
 }

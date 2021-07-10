@@ -30,7 +30,6 @@ public class Weapon {
 
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,
             CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name = "starship_id")
     private Starship starship;
 
     public Weapon() {
